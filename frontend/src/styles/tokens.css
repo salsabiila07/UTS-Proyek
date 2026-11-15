@@ -1,0 +1,53 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #332C27;
+  background: #F8F4EE;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #9A7657;
+  --color-primary-hover: #7E6047;
+  --color-secondary: #C9A98C;
+  --color-background: #F8F4EE;
+  --color-surface: #FFFDF9;
+  --color-accent-soft: #EFE4D8;
+  --color-text: #332C27;
+  --color-text-secondary: #746A62;
+  --color-text-muted: #A0968E;
+  --color-border: #E8E0D8;
+  --color-disabled: #D8D1CB;
+  --color-success: #5D8A66;
+  --color-success-text: #4C724F;
+  --color-success-bg: #EDF5EF;
+  --color-warning: #C6924B;
+  --color-warning-text: #805A23;
+  --color-warning-bg: #FFF6E7;
+  --color-danger: #B95F59;
+  --color-danger-text: #9B4540;
+  --color-danger-bg: #FCEDEC;
+  --color-info: #688AA3;
+  --color-info-text: #4F7187;
+  --color-info-bg: #EDF4F8;
+  --color-text-accessible-muted: #746A62;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body { min-width: 320px; min-height: 100vh; margin: 0; }
+
+:focus-visible { outline: 3px solid var(--color-primary-hover); outline-offset: 2px; }

@@ -1,0 +1,33 @@
+.reports-page { display: grid; gap: 20px; }
+.reports-filter-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.reports-filter-error { margin: 12px 0 0; color: var(--color-danger-text); }
+.reports-state { padding: 28px 0; color: var(--color-text-secondary); text-align: center; }
+.reports-print-header,.reports-print-footer { display: none; }
+.reports-screen-summary { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 16px; }
+.reports-screen-summary h2 { margin: 0; font-size: 20px; }
+.reports-screen-summary p { margin: 0; color: var(--color-text-secondary); }
+.reports-screen-summary span { margin-left: auto; color: var(--color-text-secondary); font-size: 13px; }
+@media (max-width: 767px) {
+  .reports-filter-grid { grid-template-columns: 1fr; }
+  .reports-screen-summary { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .reports-screen-summary span { margin-left: 0; }
+}
+@media print {
+  @page { size: landscape; margin: 14mm; }
+  body * { visibility: hidden !important; }
+  .reports-page,.reports-page * { visibility: visible !important; }
+  .reports-page { position: absolute; inset: 0; display: block; width: 100%; color: #211d19; background: white; }
+  .reports-page > :not(.reports-preview-card) { display: none !important; }
+  .reports-preview-card { display: block; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .reports-print-header { display: block; margin-bottom: 16px; text-align: center; }
+  .reports-print-header p { margin: 0 0 5px; }
+  .reports-print-header h1 { margin: 8px 0; font-size: 20px; }
+  .reports-print-header small { color: #555; }
+  .reports-screen-summary { display: none !important; }
+  .reports-page .ui-table-scroll { overflow: visible; border-color: #999; border-radius: 0; }
+  .reports-page .ui-table { width: 100%; font-size: 10pt; }
+  .reports-page .ui-table th,.reports-page .ui-table td { padding: 7px 8px; white-space: normal; border-color: #bbb; }
+  .reports-page .ui-table th { color: #211d19; background: #eee; }
+  .reports-page .ui-table tbody tr:hover { background: white; }
+  .reports-print-footer { display: block; margin-top: 14px; color: #555; font-size: 9pt; text-align: right; }
+}

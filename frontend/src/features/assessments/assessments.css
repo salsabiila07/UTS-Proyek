@@ -1,0 +1,26 @@
+.assessments-page { display: grid; gap: 20px; }
+.assessment-toolbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 20px; }
+.assessment-student-list { display: grid; gap: 16px; }
+.assessment-student { display: grid; grid-template-columns: minmax(150px, 1.2fr) repeat(3, minmax(110px, .7fr)) minmax(200px, 1.4fr); gap: 12px; align-items: end; padding: 16px 0; border-top: 1px solid var(--color-border); }
+.assessment-student:first-child { border-top: 0; }
+.assessment-student__name { align-self: center; }
+.assessment-student__field { display: grid; gap: 6px; }
+.assessment-student__field label { color: var(--color-text-secondary); font-size: 13px; font-weight: 600; }
+.assessment-student__field textarea { min-height: 42px; max-height: 100px; resize: vertical; }
+.assessment-context { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--color-text-secondary); }
+.assessment-save { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-top: 16px; }
+.assessment-state { padding: 20px 0; color: var(--color-text-secondary); text-align: center; }
+.assessment-score { font-variant-numeric: tabular-nums; }
+.assessment-notes-cell { max-width: 300px; white-space: normal !important; }
+@media (max-width: 1000px) {
+  .assessment-student { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .assessment-student__name,.assessment-notes-field { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .assessment-toolbar { grid-template-columns: 1fr; }
+  .assessment-student { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .assessment-student__name,.assessment-notes-field { grid-column: 1 / -1; }
+  .assessment-save { align-items: stretch; flex-direction: column; }
+  .assessment-save .ui-button { width: 100%; }
+  .assessment-context { align-items: flex-start; flex-direction: column; }
+}

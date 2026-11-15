@@ -1,0 +1,10 @@
+{
+  "name": "sim-ekskul-backend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/dev.js",
+    "start": "node src/server.js"
+  }
+}
